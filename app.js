@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const productsContainer = document.getElementById("product-list");
     if (productsContainer) {
       console.log("Fetching products...");
-      fetch("https://fakestoreapi.com/products")
+      fetch("https://server.knotten.net/fakestore/")
         .then((response) => response.json())
         .then((products) => {
           console.log("Products fetched:", products);

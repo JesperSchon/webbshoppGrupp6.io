@@ -2,10 +2,15 @@ document.addEventListener("DOMContentLoaded", function () {
   // Code for fetching products and displaying them in the product list on the index.html page
   const productsContainer = document.getElementById("product-list");
   if (productsContainer) {
-    console.log("Fetching products...");
-    fetch("https://server.knotten.net/fakestore/")
-      .then((response) => response.json())
-      .then((products) => {
+    console.log(`Fetching products...`);
+    const category1 = "men's clothing";
+    const category2 = "women's clothing";
+    const url1 = `https://fakestoreapi.com/products/category/${category1}`;
+    const url2 = `https://fakestoreapi.com/products/category/${category2}`;
+    Promise.all([fetch(url1), fetch(url2)])
+      .then((responses) => Promise.all(responses.map((res) => res.json())))
+      .then((categories) => {
+        const products = categories[0].concat(categories[1]);
         console.log("Products fetched:", products);
         products.forEach((product) => {
           const productCard = `

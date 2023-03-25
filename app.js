@@ -5,12 +5,16 @@ document.addEventListener("DOMContentLoaded", function () {
     console.log(`Fetching products...`);
     const category1 = "men's clothing";
     const category2 = "women's clothing";
+    const category3 = "jewelery";
+    const category4 = "electronics";
     const url1 = `https://fakestoreapi.com/products/category/${category1}`;
     const url2 = `https://fakestoreapi.com/products/category/${category2}`;
-    Promise.all([fetch(url1), fetch(url2)])
+    const url3 = `https://fakestoreapi.com/products/category/${category3}`;
+    const url4 = `https://fakestoreapi.com/products/category/${category4}`;
+    Promise.all([fetch(url1), fetch(url2), fetch(url3), fetch(url4)])
       .then((responses) => Promise.all(responses.map((res) => res.json())))
       .then((categories) => {
-        const products = categories[0].concat(categories[1]);
+        const products = categories[0].concat(categories[1]).concat(categories[2]).concat(categories[3]);
         console.log("Products fetched:", products);
         products.forEach((product) => {
           const productCard = `

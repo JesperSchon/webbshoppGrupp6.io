@@ -139,7 +139,7 @@ button[type="submit"]:hover {
 }
 .navbar-brand {
   font-size: 16px;
-  margin-left: -50px;
+  margin-left: 50px;
   font-family: Tahoma, sans-serif;
   color: #3b3b3b !important;
   margin-bottom: -30px;

@@ -59,6 +59,15 @@ header h1 {
   max-height: 100px; /* Set a maximum height for the image */
   object-fit: contain; /* Keep the image's aspect ratio and center it */
 }
+.card-text {
+  font-size: 14px;
+  font-family: Tahoma, sans-serif;
+}
+.card-title{
+  font-family: Tahoma, sans-serif;
+  font-size: 18px;
+}
+
 
 nav {
   width: 55%;
@@ -214,3 +223,7 @@ footer hr {
   margin-bottom: -20px;
 }
 
+#confirmationDetails {
+  font-family: Tahoma, sans-serif;
+  font-size: 24px;
+}

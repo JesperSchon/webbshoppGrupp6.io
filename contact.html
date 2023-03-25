@@ -7,42 +7,71 @@
   <!-- Add Bootstrap CSS for styling -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
   <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@latest/css/all.min.css" />
+
+  
 </head>
 <body>
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+ 
+  <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #ffffff; height: 100px;">
     <div class="container">
-      <a class="navbar-brand" href="index.html">Webbutik</a>
+      <img src="/Users/dimazz/Desktop/Frontend grupparbete/webbshoppGrupp6.io/image/logo.png" alt="Logo" class="logo">
+
+      <a class="navbar-brand" href="index.html">Webshop</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav">
           <li class="nav-item">
-            <a class="nav-link" href="#">Kontaktsida</a>
+            <a class="nav-link" href="contact.html">Contact</a>
           </li>
         </ul>
       </div>
     </div>
   </nav>
+
   <div class="container">
-    <h1>Contact Us</h1>
-    <p>Email: Nackademin@example.com</p>
-    <p>Phone: 08-010 00 00 01</p>
-    <h2>Our Location</h2>
-    <iframe
-    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2034.2600983331404!2d18.020755176786377!3d59.34530600974215!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x465f9d9d263b022d%3A0x82fc0f30ed84f9ed!2sNackademin!5e0!3m2!1ssv!2sse!4v1679647209361!5m2!1ssv!2sse"
-      width="600"
-      height="450"
-      frameborder="0"
-      style="border:0;"
-      allowfullscreen=""
-      loading="lazy"
-    ></iframe>
+    <div class="row">
+      <div class="col-md-6">
+        <ul class="contact-info">
+          <li><strong>Öppettider:</strong></li>
+          <li>Måndag - Fredag: 11 - 19</li>
+          <li>Lördag: 12 - 20</li>
+          <li>Söndag: Stängt</li>
+          <li><br></li>
+          <li><strong>Telefon:</strong> 08-123 123</li>
+          <li><strong>Email:</strong> nackademin@example.com</li>
+          <li><br></li>
+         
+          
+          <li>
+            <div class="d-flex flex-row">
+              <div class="d-flex flex-row social-icons-container">
+                <a href="https://www.facebook.com" class="social-icon mr-3" target="_blank"><i class="fab fa-facebook-f fa-2x"></i></a>
+                <a href="https://www.twitter.com" class="social-icon mr-3" target="_blank"><i class="fab fa-twitter fa-2x"></i></a>
+                <a href="https://www.instagram.com" class="social-icon" target="_blank"><i class="fab fa-instagram fa-2x"></i></a>
+                  </div>
+               </div>
+          </li>
+        </ul>
+      </div>
+      <div class="col-md-6">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2034.2600983331404!2d18.020755176786377!3d59.34530600974215!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x465f9d9d263b022d%3A0x82fc0f30ed84f9ed!2sNackademin!5e0!3m2!1ssv!2sse!4v1679647209361!5m2!1ssv!2sse"
+          width="100%"
+          height="450"
+          frameborder="0"
+          style="border:0;"
+          allowfullscreen=""
+          loading="lazy"
+        ></iframe>
+      </div>
+    </div>
   </div>
   
-  <footer>
+   <footer>
     <hr>
-    <p>&copy; 2023 Fake Store. All rights reserved.</p>
+    <p>&copy; 2023 Fashion Store. All rights reserved.</p>
   </footer>
   <script src="app.js"></script>
 </body>

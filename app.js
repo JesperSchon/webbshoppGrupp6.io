@@ -124,6 +124,11 @@ readMoreButtons.forEach((button) => {
             </div>
           </div>
         </div>`;
+        function setAction(form) {
+          form.action = "form.html";
+          alert(form.action);
+          return false;
+        }
     confirmationDetails.innerHTML = productCard;
 
     // Generate a random order ID and display it
@@ -131,4 +136,5 @@ readMoreButtons.forEach((button) => {
     orderIDField.innerHTML = orderID;
   }
 });
+
 

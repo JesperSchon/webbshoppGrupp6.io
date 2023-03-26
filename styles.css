@@ -139,7 +139,7 @@ button[type="submit"]:hover {
 }
 .navbar-brand {
   font-size: 16px;
-  margin-left: -50px;
+  margin-left: 60px;
   font-family: Tahoma, sans-serif;
   color: #3b3b3b !important;
   margin-bottom: -30px;
@@ -185,6 +185,16 @@ button[type="submit"]:hover {
 .contact-info li {
   margin-bottom: 5px;
 }
+
+.logo {
+  height: 200px;
+  max-height: 100%;
+  width: auto;
+  margin-left: -90px;
+  margin-bottom: -20px;
+}
+
+
 .social-icons-container {
   margin-top: 180px;
 }
@@ -214,13 +224,6 @@ footer hr {
   border: 0;
   height: 1px;
   background-image: linear-gradient(to right, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 0.2));
-}
-.logo {
-  height: 200px;
-  max-height: 100%;
-  width: auto;
-  margin-left: -90px;
-  margin-bottom: -20px;
 }
 
 #confirmationDetails {

@@ -50,7 +50,7 @@
     <form id="order-form">
       <div class="form-group">
         <label for="firstName">First Name</label>
-        <input type="text" class="form-control" id="firstName" required>
+        <input type="text" class="form-control" id="firstName" minlength="2" maxlength="50" required>
       </div>
       <div class="form-group">
         <label for="lastName">Last Name</label>
@@ -58,7 +58,7 @@
       </div>
       <div class="form-group">
         <label for="email">Email</label>
-        <input type="email" class="form-control" id="email" required>
+        <input type="email" class="form-control" id="email" maxlength="50" required>
       </div>
       <div class="form-group">
         <label for="phone">Phone Number</label>

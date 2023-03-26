@@ -230,3 +230,10 @@ footer hr {
   font-family: Tahoma, sans-serif;
   font-size: 24px;
 }
+.short-description {
+  display: -webkit-box;
+  -webkit-line-clamp: 3; /* number of lines to display */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}

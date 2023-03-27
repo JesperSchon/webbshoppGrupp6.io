@@ -237,3 +237,7 @@ footer hr {
   overflow: hidden;
   text-overflow: ellipsis;
 }
+div.centered
+{
+margin-left: 332px;
+}

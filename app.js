@@ -111,34 +111,38 @@ if (confirmationDetails && formDetails && orderIDField) {
   const orderDetails = JSON.parse(localStorage.getItem(`product-${productID}`));
   console.log("Order details from localStorage:", orderDetails);
 
+// Display the customer details in the confirmation page
+const formData = JSON.parse(localStorage.getItem(`form-data-${productID}`));
+/*const customerDetails = `
+    <div class="col-md-4">
+      <div class="card mb-4">
+        <div class="card-body">
+          <h5 class="card-title">Customer Details</h5>
+          <p class="card-text">Name: ${formData.firstName} ${formData.lastName}</p>
+          <p class="card-text">Email: ${formData.email}</p>
+          <p class="card-text">Phone: ${formData.phone}</p>
+          <p class="card-text">Address: ${formData.address}</p>
+        </div>
+      </div>
+    </div>`;*/
+
   // Display the order details in the confirmation page
   const productCard = `
       <div class="col-md-4">
         <div class="card mb-4">
           <img src="${orderDetails.image}" class="card-img-top" alt="${orderDetails.title}">
           <div class="card-body">
-            <h5 class="card-title">${orderDetails.title}</h5>
-            <p class="card-text">${orderDetails.description}</p>
-            <p class="card-text">$${orderDetails.price}</p>
+          <h5 class="card-title"> product: </h5>
+          <p class="card-text"> ${orderDetails.title}</p>
+          <h5 class="card-title">Customer Details</h5>
+            <p class="card-text">Name: ${formData.firstName} ${formData.lastName} </p>
+            <p class="card-text">Email: ${formData.email}</p>
+            <p class="card-text">Phone: ${formData.phone}</p>
+            <p class="card-text">Adress: ${formData.address}</p>
           </div>
         </div>
       </div>`;
   confirmationDetails.innerHTML = productCard;
-
-  // Display the customer details in the confirmation page
-  const formData = JSON.parse(localStorage.getItem(`form-data-${productID}`));
-  const customerDetails = `
-      <div class="col-md-4">
-        <div class="card mb-4">
-          <div class="card-body">
-            <h5 class="card-title">Customer Details</h5>
-            <p class="card-text">Name: ${formData.firstName} ${formData.lastName}</p>
-            <p class="card-text">Email: ${formData.email}</p>
-            <p class="card-text">Phone: ${formData.phone}</p>
-            <p class="card-text">Address: ${formData.address}</p>
-          </div>
-        </div>
-      </div>`;
   formDetails.innerHTML = customerDetails;
 
   // Generate a random order ID and display it

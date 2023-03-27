@@ -94,46 +94,58 @@ readMoreButtons.forEach((button) => {
     });
   }
 
-  // Code for displaying the order details on the confirmation.html page
-  const confirmationDetails = document.getElementById("confirmationDetails");
-  const orderIDField = document.getElementById("orderID");
+// Code for displaying the order details on the confirmation.html page
+const confirmationDetails = document.getElementById("confirmationDetails");
+const formDetails = document.getElementById("formDetails");
+const orderIDField = document.getElementById("orderID");
 
-  if (confirmationDetails && orderIDField) {
-    console.log("Confirmation details and order ID field detected");
-    // Get the product ID from the query string in the URL
-    const queryString = window.location.search;
-    const urlParams = new URLSearchParams(queryString);
-    const productID = urlParams.get("id");
-    console.log("Product ID from URL:", productID);
+if (confirmationDetails && formDetails && orderIDField) {
+  console.log("Confirmation details, form details, and order ID field detected");
+  // Get the product ID from the query string in the URL
+  const queryString = window.location.search;
+  const urlParams = new URLSearchParams(queryString);
+  const productID = urlParams.get("id");
+  console.log("Product ID from URL:", productID);
 
-    // Get the order details from localStorage using the updated key
-    const orderDetails = JSON.parse(
-      localStorage.getItem(`product-${productID}`)
-    );
-    console.log("Order details from localStorage:", orderDetails);
+  // Get the order details from localStorage using the updated key
+  const orderDetails = JSON.parse(localStorage.getItem(`product-${productID}`));
+  console.log("Order details from localStorage:", orderDetails);
 
-    // Display the order details in the confirmation page
-    const productCard = `
-        <div class="col-md-4">
-          <div class="card mb-4">
-            <img src="${orderDetails.image}" class="card-img-top" alt="${orderDetails.title}">
-            <div class="card-body">
-              <h5 class="card-title">${orderDetails.title}</h5>
-              <p class="card-text">${orderDetails.description}</p>
-              <p class="card-text">$${orderDetails.price}</p>
-            </div>
+  // Display the order details in the confirmation page
+  const productCard = `
+      <div class="col-md-4">
+        <div class="card mb-4">
+          <img src="${orderDetails.image}" class="card-img-top" alt="${orderDetails.title}">
+          <div class="card-body">
+            <h5 class="card-title">${orderDetails.title}</h5>
+            <p class="card-text">${orderDetails.description}</p>
+            <p class="card-text">$${orderDetails.price}</p>
           </div>
-        </div>`;
-        function setAction(form) {
-          form.action = "form.html";
-          alert(form.action);
-          return false;
-        }
-    confirmationDetails.innerHTML = productCard;
+        </div>
+      </div>`;
+  confirmationDetails.innerHTML = productCard;
 
-    // Generate a random order ID and display it
-    const orderID = Math.floor(Math.random() * 1000000);
-    orderIDField.innerHTML = orderID;
+  // Display the customer details in the confirmation page
+  const formData = JSON.parse(localStorage.getItem(`form-data-${productID}`));
+  const customerDetails = `
+      <div class="col-md-4">
+        <div class="card mb-4">
+          <div class="card-body">
+            <h5 class="card-title">Customer Details</h5>
+            <p class="card-text">Name: ${formData.firstName} ${formData.lastName}</p>
+            <p class="card-text">Email: ${formData.email}</p>
+            <p class="card-text">Phone: ${formData.phone}</p>
+            <p class="card-text">Address: ${formData.address}</p>
+          </div>
+        </div>
+      </div>`;
+  formDetails.innerHTML = customerDetails;
+
+  // Generate a random order ID and display it
+  const orderID = Math.floor(Math.random() * 1000000);
+  orderIDField.innerHTML = orderID;
+
+    
   }
 });
 

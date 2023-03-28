@@ -139,6 +139,7 @@ const formData = JSON.parse(localStorage.getItem(`form-data-${productID}`));
             <p class="card-text">Email: ${formData.email}</p>
             <p class="card-text">Phone: ${formData.phone}</p>
             <p class="card-text">Adress: ${formData.address}</p>
+            <p class="card-text">zipcode: ${formData.zipCodeInput}</p>
           </div>
         </div>
       </div>`;
@@ -172,9 +173,14 @@ emailinput.setAttribute('maxlength',50);
 emailinput.setAttribute('required',true);
 emailinput.setAttribute('type','email');
 
-// limitations on the phone input
-var phoneinput= document.getElementById("phone");
-phoneinput.setAttribute('min',13);
-phoneinput.setAttribute('max',50);
-phoneinput.setAttribute('required',true);
-phoneinput.setAttribute('type','number');
+// limitations on the zip code input
+const zipCodeInput = document.getElementById('zip-code');
+zipCodeInput.setAttribute('pattern', '[0-9]{3} [0-9]{2}');
+zipCodeInput.setAttribute('maxlength', '6');
+zipCodeInput.setAttribute('required',true);
+
+// limitations on the zip code input
+
+/*const phoneNumberInput = document.getElementById('phone-number1');
+  phoneNumberInput.setAttribute('pattern', '[0-9]{10,15}');
+  phoneNumberInput.setAttribute('maxlength', '15');*/

@@ -153,4 +153,28 @@ const formData = JSON.parse(localStorage.getItem(`form-data-${productID}`));
   }
 });
 
+// limitations on the fname input
+var nameinput= document.getElementById("firstName");
+nameinput.setAttribute('minlength',2);
+nameinput.setAttribute('maxlength',50);
+nameinput.setAttribute('required',true);
 
+// limitations on the Lname input
+var lnameinput= document.getElementById("lastName");
+lnameinput.setAttribute('minlength',2);
+lnameinput.setAttribute('maxlength',50);
+lnameinput.setAttribute('required',true);
+
+// limitations on the email input
+var emailinput= document.getElementById("email");
+emailinput.setAttribute('minlength',2);
+emailinput.setAttribute('maxlength',50);
+emailinput.setAttribute('required',true);
+emailinput.setAttribute('type','email');
+
+// limitations on the phone input
+var phoneinput= document.getElementById("phone");
+phoneinput.setAttribute('min',13);
+phoneinput.setAttribute('max',50);
+phoneinput.setAttribute('required',true);
+phoneinput.setAttribute('type','number');

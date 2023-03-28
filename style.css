@@ -144,12 +144,15 @@ nav {
   justify-content: space-between;
   align-items: center;
   background-color: #ababab;
-  height: 100px;
-  padding: 0 20px;
-  border-bottom: 1px solid rgb(118, 118, 118);
+  height: 300px;
+  padding: 0 60px;
+  border-top: 40px solid rgb(188, 188, 188);
+  border-bottom: 40px solid rgb(188, 188, 188);
   border-radius: 0px !important;
-  
+  margin-top: 110px; /* Lägg till en margin-top på 110px */
 }
+
+
 
 
 nav a {
@@ -203,7 +206,9 @@ button[type="submit"]:hover {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 5px 20px;
+  padding: 40px 20px;
+  height: 80px; /* Ändra höjden */
+  width: 100%; /* Ändra bredden */
 }
 .navbar-brand {
   font-size: 16px;

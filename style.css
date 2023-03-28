@@ -47,13 +47,7 @@ body {
   grid-area: right;
 }
 
-/* Style the footer */
-.footer {
-  grid-area: footer;
-  background-color: #f1f1f1;
-  padding: 10px;
-  text-align: center;
-}
+
 
 /* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
 @media (max-width: 600px) {
@@ -144,16 +138,40 @@ nav {
   justify-content: space-between;
   align-items: center;
   background-color: #ababab;
-  height: 300px;
+  height: 80px;
   padding: 0 60px;
-  border-top: 40px solid rgb(188, 188, 188);
-  border-bottom: 40px solid rgb(188, 188, 188);
+
   border-radius: 0px !important;
-  margin-top: 110px; /* Lägg till en margin-top på 110px */
+  margin-top: 110px;
 }
 
+.nav-textscroller {
+  background-color: #e0e0e0;
+  height: 35px;
+  overflow: hidden;
+}
 
-
+.nav-textscroller p {
+  font-size: 16px;
+  margin: 0;
+  padding: 5px;
+  white-space: nowrap;
+  animation: scroll 25s linear infinite;
+  font-family: Tahoma, sans-serif;
+  color: #3b3b3b
+}
+@keyframes scroll {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+.down {
+  height: 35px; 
+  background-color: #e5e5e5;
+}
 
 nav a {
   color: rgb(0, 0, 0);
@@ -207,9 +225,10 @@ button[type="submit"]:hover {
   align-items: center;
   justify-content: space-between;
   padding: 40px 20px;
-  height: 80px; /* Ändra höjden */
-  width: 100%; /* Ändra bredden */
+  height: 80px; 
+  width: 100%; 
 }
+
 .navbar-brand {
   font-size: 16px;
   margin-left: 60px;
@@ -230,6 +249,7 @@ button[type="submit"]:hover {
 .navbar-brand img {
   height: 100px;
 }
+
 .nav-link {
   font-size: 20px;
   margin-left: 20px;

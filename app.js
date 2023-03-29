@@ -175,6 +175,8 @@ emailinput.setAttribute('minlength',2);
 emailinput.setAttribute('maxlength',50);
 emailinput.setAttribute('required',true);
 emailinput.setAttribute('type','email');
+emailinput.setAttribute('placeholder','Maactheman@outlook.com');
+emailinput.setAttribute('title','email');
 emailinput.setAttribute('pattern','[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$');
 
 // limitations on the zip code input

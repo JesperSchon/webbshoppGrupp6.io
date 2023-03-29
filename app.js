@@ -17,7 +17,7 @@ document.addEventListener("DOMContentLoaded", function () {
         const products = categories[0].concat(categories[1]).concat(categories[2]).concat(categories[3]);
         console.log("Products fetched:", products);
         products.forEach((product) => {
-          const productCard = `
+          const customerDetails = `
           <div class="col-md-4">
             <div class="card mb-4">
               <img src="${product.image}" class="card-img-top product-image" alt="${product.title}">
@@ -33,7 +33,7 @@ document.addEventListener("DOMContentLoaded", function () {
           
           // ... existing code ...
 
-          productsContainer.innerHTML += productCard;
+          productsContainer.innerHTML += customerDetails;
         });
 
         const readMoreButtons = document.querySelectorAll(".read-more");
@@ -106,52 +106,55 @@ if (confirmationDetails && formDetails && orderIDField) {
   const urlParams = new URLSearchParams(queryString);
   const productID = urlParams.get("id");
   console.log("Product ID from URL:", productID);
-
+  
   // Get the order details from localStorage using the updated key
   const orderDetails = JSON.parse(localStorage.getItem(`product-${productID}`));
   console.log("Order details from localStorage:", orderDetails);
-
-// Display the customer details in the confirmation page
-const formData = JSON.parse(localStorage.getItem(`form-data-${productID}`));
-/*const customerDetails = `
-    <div class="col-md-4">
-      <div class="card mb-4">
-        <div class="card-body">
-          <h5 class="card-title">Customer Details</h5>
-          <p class="card-text">Name: ${formData.firstName} ${formData.lastName}</p>
-          <p class="card-text">Email: ${formData.email}</p>
-          <p class="card-text">Phone: ${formData.phone}</p>
-          <p class="card-text">Address: ${formData.address}</p>
-        </div>
-      </div>
-    </div>`;*/
-
+  // Display the customer details in the confirmation page
+  const formData = JSON.parse(localStorage.getItem(`form-data-${productID}`));
   // Display the order details in the confirmation page
-  const productCard = `
-      <div class="col-md-4">
-        <div class="card mb-4">
-          <img src="${orderDetails.image}" class="card-img-top" alt="${orderDetails.title}">
-          <div class="card-body">
-          <h5 class="card-title"> product: </h5>
-          <p class="card-text"> ${orderDetails.title}</p>
-          <h5 class="card-title">Customer Details</h5>
-            <p class="card-text">Name: ${formData.firstName} ${formData.lastName} </p>
-            <p class="card-text">Email: ${formData.email}</p>
-            <p class="card-text">Phone: ${formData.phone}</p>
-            <p class="card-text">Adress: ${formData.address}</p>
-            <p class="card-text">zipcode: ${formData.zipCodeInput}</p>
-          </div>
-        </div>
-      </div>`;
+    const confirmationCard = `<div class="col-md-4">
+    <div class="card mb-4">
+      <img src="${orderDetails.image}" class="card-img-top" alt="${orderDetails.title}">
+      <div class="card-body">
+      <h5 class="card-title font-weight-bold"> product:<br></h5>
+      <h6 class="card-title"> ${orderDetails.title}</h6>
+      <p class="card-text">${orderDetails.description}</p>
+    <p class="card-text">$${orderDetails.price}</p>
+      <h5 class="card-title font-weight-bold">Customer Details</h5>
+        <p class="card-text">Name: ${formData.firstName} ${formData.lastName} </p>
+        <p class="card-text">Email: ${formData.email}</p>
+        <p class="card-text">Phone: ${formData.phone}</p>
+        <p class="card-text">Adress: ${formData.address}</p>
+        <p class="card-text">zipcode: ${formData.zipCodeInput}</p>
+      </div>
+    </div>
+  </div>`;
+  
+  /*const customerDetails = `
+  <div class="col-md-4">
+  <div class="card mb-4">
+  <div class="card-body">
+  <h5 class="card-title">Customer Details</h5>
+  <p class="card-text">Name: ${formData.firstName} ${formData.lastName}</p>
+  <p class="card-text">Email: ${formData.email}</p>
+  <p class="card-text">Phone: ${formData.phone}</p>
+  <p class="card-text">Address: ${formData.address}</p>
+  </div>
+  </div>
+  </div>`;*/
+  
+  confirmationDetails.innerHTML = confirmationCard;
   confirmationDetails.innerHTML = productCard;
-  formDetails.innerHTML = customerDetails;
-
+  formDetails.innerHTML = confirmationCard;
+  
+  
   // Generate a random order ID and display it
   const orderID = Math.floor(Math.random() * 1000000);
   orderIDField.innerHTML = orderID;
-
-    
-  }
+  
+  
+}
 });
 
 // limitations on the fname input
@@ -182,5 +185,5 @@ zipCodeInput.setAttribute('required',true);
 // limitations on the zip code input
 
 /*const phoneNumberInput = document.getElementById('phone-number1');
-  phoneNumberInput.setAttribute('pattern', '[0-9]{10,15}');
-  phoneNumberInput.setAttribute('maxlength', '15');*/
+phoneNumberInput.setAttribute('pattern', '[0-9]{10,15}');
+phoneNumberInput.setAttribute('maxlength', '15');*/

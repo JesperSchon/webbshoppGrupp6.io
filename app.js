@@ -167,6 +167,17 @@ phoneInput.setAttribute('type', 'tel');
 phoneInput.setAttribute('pattern', '[0-9]{4}-[0-9]{2}[0-9]{2}[0-9]{2}');
 phoneInput.setAttribute('required',true);
 
+function validatePhoneInput() {
+  var phoneInput = document.getElementById("phone-input");
+  var regex = /^[\d()-]{0,50}$/; // allow digits, hyphens, and parentheses, up to 50 characters
+  if (!regex.test(phoneInput.value)) {
+    phoneInput.setCustomValidity("Invalid phone number"); // set a validation error message
+  } else {
+    phoneInput.setCustomValidity(""); // reset the validation error message
+  }
+}
+
+
 // limitations on the fname input
 var nameinput= document.getElementById("firstName");
 nameinput.setAttribute('minlength',2);

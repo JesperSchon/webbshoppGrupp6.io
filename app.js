@@ -87,6 +87,8 @@ readMoreButtons.forEach((button) => {
         email: document.getElementById("email").value,
         phone: document.getElementById("phone").value,
         address: document.getElementById("address").value,
+        zipCodeInput: document.getElementById("zip-code").value,
+        City: document.getElementById("city").value,
       };
 
       localStorage.setItem(`form-data-${productID}`, JSON.stringify(formData));
@@ -126,6 +128,7 @@ if (confirmationDetails && formDetails && orderIDField) {
         <p class="card-text">Email: ${formData.email}</p>
         <p class="card-text">Phone: ${formData.phone}</p>
         <p class="card-text">Adress: ${formData.address}</p>
+        <p class="card-text">City: ${formData.City}</p>
         <p class="card-text">zipcode: ${formData.zipCodeInput}</p>
       </div>
     </div>
@@ -157,6 +160,13 @@ if (confirmationDetails && formDetails && orderIDField) {
 }
 });
 
+// limitations on the phone input
+var phoneInput = document.getElementById('phone');
+phoneInput.setAttribute('class', 'form-control');
+phoneInput.setAttribute('type', 'tel');
+phoneInput.setAttribute('pattern', '[0-9]{4}-[0-9]{2}[0-9]{2}[0-9]{2}');
+phoneInput.setAttribute('required',true);
+
 // limitations on the fname input
 var nameinput= document.getElementById("firstName");
 nameinput.setAttribute('minlength',2);
@@ -180,28 +190,22 @@ emailinput.setAttribute('title','email');
 emailinput.setAttribute('pattern','[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$');
 
 // limitations on the Address input
-const address = document.getElementById('address');
+var address = document.getElementById('address');
 address.setAttribute('minlength', '4');
 address.setAttribute('maxlength', '50');
 address.setAttribute('required',true);
 
 // limitations on the City input
-const City = document.getElementById('city');
+var City = document.getElementById('city');
 City.setAttribute('minlength', '2');
 City.setAttribute('maxlength', '50');
 City.setAttribute('required',true);
 
 // limitations on the zip code input
-const zipCodeInput = document.getElementById('zip-code');
+var zipCodeInput = document.getElementById('zip-code');
 zipCodeInput.setAttribute('pattern', '[0-9]{3} [0-9]{2}');
 zipCodeInput.setAttribute('maxlength', '6');
 zipCodeInput.setAttribute('required',true);
 
 
-// limitations on the phone input
-const phoneInput = document.getElementById('phone');
-phoneInput.setAttribute('class', 'form-control');
-phoneInput.setAttribute('type', 'tel');
-phoneInput.setAttribute('pattern', '[0-9]{4}-[0-9]{2}[0-9]{2}[0-9]{2}');
-phoneInput.setAttribute('required',true);
 

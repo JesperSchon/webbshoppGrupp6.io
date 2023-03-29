@@ -175,6 +175,7 @@ emailinput.setAttribute('minlength',2);
 emailinput.setAttribute('maxlength',50);
 emailinput.setAttribute('required',true);
 emailinput.setAttribute('type','email');
+emailinput.setAttribute('pattern','[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$');
 
 // limitations on the zip code input
 const zipCodeInput = document.getElementById('zip-code');
@@ -182,8 +183,15 @@ zipCodeInput.setAttribute('pattern', '[0-9]{3} [0-9]{2}');
 zipCodeInput.setAttribute('maxlength', '6');
 zipCodeInput.setAttribute('required',true);
 
-// limitations on the zip code input
+// limitations on the phone input
+const phoneInput = document.getElementById('phone');
+phoneInput.setAttribute('class', 'form-control');
+phoneInput.setAttribute('type', 'tel');
+phoneInput.setAttribute('placeholder', '0730-573170');
+phoneInput.setAttribute('pattern', '[0-9]{4}-[0-9]{2}[0-9]{2}[0-9]{2}');
+zipCodeInput.setAttribute('required',true);
 
+// limitations on the zip code input
 /*const phoneNumberInput = document.getElementById('phone-number1');
 phoneNumberInput.setAttribute('pattern', '[0-9]{10,15}');
 phoneNumberInput.setAttribute('maxlength', '15');*/

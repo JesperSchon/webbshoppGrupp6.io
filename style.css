@@ -1,3 +1,4 @@
+
 * {
   box-sizing: border-box;
 }
@@ -47,7 +48,13 @@ body {
   grid-area: right;
 }
 
-
+/* Style the footer */
+.footer {
+  grid-area: footer;
+  background-color: #f1f1f1;
+  padding: 10px;
+  text-align: center;
+}
 
 /* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
 @media (max-width: 600px) {
@@ -138,49 +145,20 @@ nav {
   justify-content: space-between;
   align-items: center;
   background-color: #ababab;
-  height: 80px;
-  padding: 0 60px;
-
+  height: 100px;
+  padding: 0 20px;
+  border-bottom: 1px solid rgb(118, 118, 118);
   border-radius: 0px !important;
-  margin-top: 110px;
+  
 }
 
-.nav-textscroller {
-  background-color: #e0e0e0;
-  height: 35px;
-  overflow: hidden;
-}
-
-.nav-textscroller p {
-  font-size: 16px;
-  margin: 0;
-  padding: 5px;
-  white-space: nowrap;
-  animation: scroll 25s linear infinite;
-  font-family: Tahoma, sans-serif;
-  color: #3b3b3b
-}
-@keyframes scroll {
-  0% {
-    transform: translateX(100%);
-  }
-  100% {
-    transform: translateX(-100%);
-  }
-}
-.down {
-  height: 35px; 
-  background-color: #e5e5e5;
-}
 
 nav a {
   color: rgb(0, 0, 0);
   text-decoration: none;
 }
 
-nav a:hover {
-  text-decoration: underline;
-}
+
 
 form div {
   margin-bottom: 10px;
@@ -224,16 +202,13 @@ button[type="submit"]:hover {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 40px 20px;
-  height: 80px; 
-  width: 100%; 
+  padding: 5px 20px;
 }
-
 .navbar-brand {
   font-size: 16px;
   margin-left: 60px;
   font-family: Tahoma, sans-serif;
-  color: #3b3b3b !important;
+  color: #3b3b3b ;
   margin-bottom: -30px;
 }
 
@@ -249,7 +224,6 @@ button[type="submit"]:hover {
 .navbar-brand img {
   height: 100px;
 }
-
 .nav-link {
   font-size: 20px;
   margin-left: 20px;
@@ -261,13 +235,13 @@ button[type="submit"]:hover {
 }
 
 .navbar-nav .nav-link:hover {
-  color: #808080 !important;
+  color: #808080 ;
 }
 .navbar-brand:hover {
   color: grey;
 }
 .navbar-brand:hover {
-  color: grey !important;
+  color: grey ;
 }
 .contact-info {
   list-style: none;
@@ -280,11 +254,12 @@ button[type="submit"]:hover {
 }
 
 .logo {
-  height: 200px;
+  height: 1800px;
   max-height: 100%;
   width: auto;
-  margin-left: -90px;
-  margin-bottom: -20px;
+  margin-left: -100px;
+  margin-bottom: -30px;
+  margin-top: -56px;
 }
 
 
@@ -335,3 +310,14 @@ div.centered
 margin-top: 30px;  
 margin-left: 332px;
 }
+/* Dropdown menu button */
+.dropdown-header {
+  
+  top: 20px; /* or any other distance from the top */
+  right: 20px; /* or any other distance from the right */
+  padding: 10px; /* or any other amount of padding */
+  cursor: pointer;
+  z-index: 9999; /* or any other value to make sure it is on top */
+}
+
+

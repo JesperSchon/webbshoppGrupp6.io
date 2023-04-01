@@ -9,8 +9,8 @@ document.addEventListener("DOMContentLoaded", function () {
         .then((products) => {
           console.log("Products fetched:", products);
           products.forEach((product) => {
-            const productCard = `
-            <div class="col-md-4">
+            const productCard = 
+            `<div class="col-md-4">
               <div class="card mb-4">
                 <img src="${product.image}" class="card-img-top product-image" alt="${product.title}">
                 <div class="card-body">

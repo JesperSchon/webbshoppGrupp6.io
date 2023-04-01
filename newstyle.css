@@ -1,0 +1,120 @@
+
+  .product-image {
+    height: 200px; /* Set a fixed height */
+    width: 100%; /* Set a fixed width */
+    object-fit: cover; /* Fill the container while maintaining aspect ratio */
+    object-position: center; /* Center the image within the container */
+  }
+  .card {
+    margin-bottom: 20px; /* Add some space between the cards */
+  }
+  .card-img-top {
+    max-height: 100px; /* Set a maximum height for the image */
+    object-fit: contain; /* Keep the image's aspect ratio and center it */
+  }
+  .card-text {
+    font-size: 14px;
+    font-family: Tahoma, sans-serif;
+  }
+  .card-title{
+    font-family: Tahoma, sans-serif;
+    font-size: 18px;
+  }
+  
+  
+  @keyframes scroll {
+    0% {
+      transform: translateX(100%);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+  }
+  
+  
+  
+  form div {
+    margin-bottom: 10px;
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  input[type="text"],
+  input[type="email"],
+  textarea {
+    width: 100%;
+    padding: 5px;
+    border: 1px solid #ced4da;
+    border-radius: 4px;
+  }
+  
+  button[type="submit"] {
+    background-color: #007bff;
+    color: white;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  button[type="submit"]:hover {
+    background-color: #0056b3;
+  }
+  
+  
+  .contact-info li {
+    margin-bottom: 5px;
+  }
+  
+  
+  
+  
+  .social-icons-container {
+    margin-top: 180px;
+  }
+  .social-icon i {
+    color: #3b3b3b;
+    transition: color 0.2s ease-in-out;
+  }
+  
+  .social-icon:hover i {
+    color: blue;
+  }
+  
+  
+  
+  
+  #confirmationDetails {
+    font-family: Tahoma, sans-serif;
+    font-size: 24px;
+  }
+  .short-description {
+    display: -webkit-box;
+    -webkit-line-clamp: 3; /* number of lines to display */
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+ 
+  
+  .container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+    flex: 1 0 auto;
+    font-family: Tahoma, sans-serif;
+  }
+  
+  .contact-info {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .contact-info li {
+    margin-bottom: 5px;
+  }
+  

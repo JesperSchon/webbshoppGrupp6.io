@@ -233,7 +233,7 @@ button[type="submit"]:hover {
   font-size: 16px;
   margin-left: 60px;
   font-family: Tahoma, sans-serif;
-  color: #3b3b3b !important;
+  color: #3b3b3b ;
   margin-bottom: -30px;
 }
 
@@ -241,7 +241,7 @@ button[type="submit"]:hover {
   font-size: 16px;
   margin-left: 0px;
   font-family: Tahoma, sans-serif;
-  color: #3b3b3b !important;
+  color: #3b3b3b ;
   margin-bottom: -30px;
 }
 

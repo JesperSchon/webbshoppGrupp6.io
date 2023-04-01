@@ -208,8 +208,21 @@ button[type="submit"]:hover {
   font-size: 16px;
   margin-left: 60px;
   font-family: Tahoma, sans-serif;
-  color: #3b3b3b ;
   margin-bottom: -30px;
+}
+
+.navbar-nav {
+  display: flex;
+}
+
+.navbar-nav .nav-link:hover {
+  color: #808080 ;
+}
+.navbar-brand:hover {
+  color: grey;
+}
+.navbar-brand:hover {
+  color: grey ;
 }
 
 .navbar-nav .nav-link {
@@ -228,20 +241,6 @@ button[type="submit"]:hover {
   font-size: 20px;
   margin-left: 20px;
   
-}
-
-.navbar-nav {
-  display: flex;
-}
-
-.navbar-nav .nav-link:hover {
-  color: #808080 ;
-}
-.navbar-brand:hover {
-  color: grey;
-}
-.navbar-brand:hover {
-  color: grey ;
 }
 .contact-info {
   list-style: none;
@@ -299,7 +298,7 @@ footer hr {
   font-size: 24px;
 }
 .short-description {
-  display: -webkit-box;
+  display:-webkit-box;
   -webkit-line-clamp: 3; /* number of lines to display */
   -webkit-box-orient: vertical;
   overflow: hidden;
@@ -320,4 +319,8 @@ margin-left: 332px;
   z-index: 9999; /* or any other value to make sure it is on top */
 }
 
+.nav-item .nav-link 
+{
+padding-bottom: +18px;
+}
 

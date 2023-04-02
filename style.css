@@ -235,18 +235,20 @@ button[type="submit"]:hover {
 @media (max-width: 991.98px) {
   .navbar-collapse {
     justify-content: flex-start;
-    margin-left: -5px;
-    margin-top: -15px;
+    margin-left: -35px;
+    margin-top: 0px;
   }
 
   .navbar-nav {
     flex-direction: row;
     position: relative;
-    left: -150px; /* Justera beroende på hur mycket du vill flytta texten till vänster */
+    left: -150px;
+    font-size: 20px;
+   
   }
 
   .nav-item {
-    margin-right: 0px;
+    margin-right: -5px;
   }
 
   .logo {
@@ -257,8 +259,15 @@ button[type="submit"]:hover {
     display: none;
   }
 
+  .navbar-toggler {
+    position: absolute;
+    top: 10px;
+    right: 290px; 
+}
+
   .navbar-toggler-icon {
     margin-top: -5px;
+    font-size: 15px;
   }
   
   .nav-textscroller {

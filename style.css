@@ -227,7 +227,51 @@ button[type="submit"]:hover {
   padding: 40px 20px;
   height: 80px; 
   width: 100%; 
+  z-index: 1000;
+  position: relative;
 }
+
+/* Styling for expanded menu in mobile view */
+@media (max-width: 991.98px) {
+  .navbar-collapse {
+    justify-content: flex-start;
+    margin-left: -5px;
+    margin-top: -15px;
+  }
+
+  .navbar-nav {
+    flex-direction: row;
+    position: relative;
+    left: -150px; /* Justera beroende på hur mycket du vill flytta texten till vänster */
+  }
+
+  .nav-item {
+    margin-right: 0px;
+  }
+
+  .logo {
+    display: none;
+  }
+
+  .down {
+    display: none;
+  }
+
+  .navbar-toggler-icon {
+    margin-top: -5px;
+  }
+  
+  .nav-textscroller {
+    display: none;
+  }
+  
+}
+
+
+
+
+
+
 
 .navbar-brand {
   font-size: 16px;

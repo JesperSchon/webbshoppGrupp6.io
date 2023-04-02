@@ -170,7 +170,7 @@ nav {
 }
 .down {
   height: 35px; 
-  background-color: #e5e5e5;
+  background-color: #dfdfdf;
 }
 
 nav a {
@@ -239,25 +239,19 @@ button[type="submit"]:hover {
 
 .navbar-nav .nav-link {
   font-size: 16px;
-  margin-left: 0px;
+  margin-left: 10px;
   font-family: Tahoma, sans-serif;
   color: #3b3b3b !important;
   margin-bottom: -30px;
 }
 
-
-.navbar-brand img {
-  height: 100px;
-}
-
 .nav-link {
   font-size: 20px;
-  margin-left: 20px;
-  
 }
 
 .navbar-nav {
   display: flex;
+  margin-left: 85px;
 }
 
 .navbar-nav .nav-link:hover {
@@ -335,3 +329,4 @@ div.centered
 margin-top: 30px;  
 margin-left: 332px;
 }
+

@@ -170,7 +170,7 @@ nav {
 }
 .down {
   height: 35px; 
-  background-color: #dfdfdf;
+  background-color: #e6e6e6;
 }
 
 nav a {
@@ -266,12 +266,6 @@ button[type="submit"]:hover {
   }
   
 }
-
-
-
-
-
-
 
 .navbar-brand {
   font-size: 16px;

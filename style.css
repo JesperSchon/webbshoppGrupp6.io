@@ -242,7 +242,7 @@ button[type="submit"]:hover {
   .navbar-nav {
     flex-direction: row;
     position: relative;
-    left: -150px;
+    left: -145px;
     font-size: 20px;
    
   }

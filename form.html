@@ -4,15 +4,14 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Fill Form</title>
+  <title>Order Form</title>
   <!-- Add Bootstrap CSS for styling -->
   <link rel="stylesheet" href="bootstrap.css">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@latest/css/all.min.css" />  
   <link rel="stylesheet" href="newstyle.css">
 </head>
 <body>
-<!-- Header -->
-<header class="bg-light">
+<!-- Navigation bar -->
+<header class="bg-light ">
   <nav class="container navbar navbar-expand-lg navbar-light">
     <div class="container-fluid">
       <a class="navbar-brand" href="index.html">
@@ -26,6 +25,9 @@
         <ul class="navbar-nav ms-auto">
           <li class="nav-item">
             <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+          </li>
+          <li class="nav-item "  >
+            <a class="nav-link"  href="menClothing.html">Men's</a>
           </li>
           <li class="nav-item">
               <a class="nav-link"  href="womenClothing.html">Women's</a>
@@ -44,6 +46,7 @@
     </div>
   </nav>
 </header>
+
 
 
 
@@ -72,8 +75,8 @@
       </div>-->
       <div class="form-group" >
         <label for="phone">Phone Number</label>
-        <input class="form-control" id="phone" name="phone" aria-describedby="phoneHelp" placeholder="0730-000000" oninput="validatePhoneInput()" >
-        <small id="phoneHelp" class="form-text text-muted">Format: 0730-000000</small>
+        <input class="form-control" id="phone" name="phone" aria-describedby="phoneHelp" placeholder="0730000000" oninput="validatePhoneInput()" >
+        <small id="phoneHelp" class="form-text text-muted">Format: 0730000000</small>
       </div>
       <div class="form-group">
         <label for="address">Address</label>
@@ -101,5 +104,6 @@
 
   <!-- Bootstrap JS -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/js/bootstrap.bundle.min.js"></script>
+  <script src="app.js"></script>
 </body>
 </html>

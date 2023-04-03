@@ -164,7 +164,7 @@ if (confirmationDetails && formDetails && orderIDField) {
 var phoneInput = document.getElementById('phone');
 phoneInput.setAttribute('class', 'form-control');
 phoneInput.setAttribute('type', 'tel');
-phoneInput.setAttribute('pattern', '[0-9]{4}-[0-9]{2}[0-9]{2}[0-9]{2}');
+phoneInput.setAttribute('pattern', '[0-9]{4}[0-9]{2}[0-9]{2}[0-9]{2}');
 phoneInput.setAttribute('required',true);
 
 function validatePhoneInput() {

@@ -1,66 +1,71 @@
-<!-- index.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Product List</title>
-  <!-- Add Bootstrap CSS for styling -->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-  <link rel="stylesheet" href="style.css">
-
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Index Page</title>
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/css/bootstrap.min.css">
+  <link rel="stylesheet" href="newstyle.css">
 </head>
 <body>
-
-  
-  <!-- Navigation bar -->
-  <div>
-    <nav class="navbar navbar-expand-lg navbar-light bg-white navbar-collapse">
-      <div class="container">
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation" >
+  <!-- Header -->
+  <header class="bg-light">
+    <nav class="container navbar navbar-expand-lg navbar-light">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="index.html">
+          <img src="image/logo1.png" alt="Logo" height="50">
+        </a>
+        <a class="navbar-brand" href="#">Fashion Store</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
-          <a href="index.html"><img src="image/logo.png" alt="logo" height="140"></a>
-          
-          <ul class="navbar-nav">
-            <li class="nav-item pb-3">
-              <a class="nav-link" href="index.html">Home</a>
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="index.html">Home</a>
             </li>
-            <li class="nav-item pb-3"  >
-              <a class="nav-link"  href="menClothing.html">Men's</a>
+            <li class="nav-item">
+                <a class="nav-link"  href="womenClothing.html">Women's</a>
             </li>
-            <li class="nav-item pb-3">
-              <a class="nav-link"  href="womenClothing.html">Women's</a>
+            <li class="nav-item">
+                <a class="nav-link"  href="jewelry.html">Jewelry</a>
             </li>
-            <li class="nav-item pb-3">
-              <a class="nav-link"  href="jewelry.html">Jewelry</a>
+            <li class="nav-item" >
+                <a class="nav-link"  href="electronics.html">Electronics</a>
             </li>
-            <li class="nav-item pb-3 ">
-              <a class="nav-link"  href="electronics.html">Electronics</a>
-            </li>
-            <li class="nav-item pb-2">
+            <li class="nav-item" >
               <a class="nav-link"  href="contact.html">Contact</a>
+            </li>
+            <li class="nav-item" >
+
+            </li>
+            <li class="nav-item" >
+
+            </li>
+            <li class="nav-item" >
             </li>
           </ul>
         </div>
       </div>
     </nav>
-  </div>
+  </header>
   
-  <div class="down"></div>
-  
-<div class="container">
+  <!-- Main Content -->
+  <main class="container my-5">
+    <h1 class="text-center">Welcome to My Website</h1>
+    <p class="lead text-center">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis eu augue vel dolor accumsan tempus. Donec eleifend sapien a felis efficitur eleifend. Ut vel euismod est, in vestibulum ipsum. </p>
+  </main>
 
-  <div class="container">
-    <div class="row" id="product-list"></div>
-  </div>
-
-   <footer>
-    <hr>
-    <p>&copy; 2023 Fashion Store. All rights reserved.</p>
+  <!-- Footer -->
+  <footer class="bg-light">
+    <div class="container text-center">
+      &copy; 2023 Fashion Store. All rights reserved.
+    </div>
   </footer>
-  <script src="app.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js" integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N" crossorigin="anonymous"></script>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

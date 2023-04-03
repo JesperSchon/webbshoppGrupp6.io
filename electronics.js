@@ -15,7 +15,8 @@ document.addEventListener("DOMContentLoaded", function () {
                 <img src="${product.image}" class="card-img-top product-image" alt="${product.title}">
                 <div class="card-body">
                   <h5 class="card-title">${product.title}</h5>
-                  <p class="card-text">${product.description}</p>
+                  <p class="card-text short-description">${product.description}</p>
+                  <button class="btn btn-link read-more">Read More</button>
                   <p class="card-text">$${product.price}</p>
                   <button class="btn btn-primary order-button" data-product-id="${product.id}">Order now</button>
                 </div>
@@ -23,6 +24,19 @@ document.addEventListener("DOMContentLoaded", function () {
             </div>`;
             productsContainer.innerHTML += productCard;
           });
+          const readMoreButtons = document.querySelectorAll(".read-more");
+readMoreButtons.forEach((button) => {
+  button.addEventListener("click", function (event) {
+    const shortDescription = event.target.previousElementSibling;
+    shortDescription.classList.toggle("short-description");
+
+    if (event.target.textContent === "Read More") {
+      event.target.textContent = "Read Less";
+    } else {
+      event.target.textContent = "Read More";
+    }
+  });
+});
   
           const orderButtons = document.querySelectorAll(".order-button");
           orderButtons.forEach((button) => {

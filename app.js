@@ -115,6 +115,7 @@ if (confirmationDetails && formDetails && orderIDField) {
   // Display the customer details in the confirmation page
   const formData = JSON.parse(localStorage.getItem(`form-data-${productID}`));
   // Display the order details in the confirmation page
+  const orderID = Math.floor(Math.random() * 1000000);
     const confirmationCard = `<div class="col-md-4">
     <div class="card mb-4">
       <img src="${orderDetails.image}" class="card-img-top" alt="${orderDetails.title}">
@@ -130,6 +131,7 @@ if (confirmationDetails && formDetails && orderIDField) {
         <p class="card-text">Adress: ${formData.address}</p>
         <p class="card-text">City: ${formData.City}</p>
         <p class="card-text">zipcode: ${formData.zipCodeInput}</p>
+        <p class="card-title font-weight-bold">Order Number: ${orderID}</p>
       </div>
     </div>
   </div>`;
@@ -153,8 +155,9 @@ if (confirmationDetails && formDetails && orderIDField) {
   
   
   // Generate a random order ID and display it
-  const orderID = Math.floor(Math.random() * 1000000);
-  orderIDField.innerHTML = orderID;
+
+orderIDField.innerHTML = orderID;
+
   
   
 }

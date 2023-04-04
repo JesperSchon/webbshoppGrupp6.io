@@ -128,3 +128,8 @@
   text-decoration: none;
   color: black;
  }
+
+ p.card-title {
+  font-weight: 700;
+  font-size: 16px;
+}

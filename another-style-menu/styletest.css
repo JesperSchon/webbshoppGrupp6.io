@@ -1,0 +1,761 @@
+* {
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  
+  /* Style the header */
+  .header {
+    grid-area: header;
+    background-color: #f1f1f1;
+    padding: 30px;
+    text-align: center;
+    font-size: 35px;
+  }
+  
+  /* The grid container */
+  .grid-container {
+    display: grid;
+    grid-template-areas: 
+      'header header header header header header' 
+      'left left middle middle right right' 
+      'footer footer footer footer footer footer';
+    /* grid-column-gap: 10px; - if you want gap between the columns */
+  } 
+  
+  .left,
+  .middle,
+  .right {
+    padding: 10px;
+    height: 300px; /* Should be removed. Only for demonstration */
+  }
+  
+  /* Style the left column */
+  .left {
+    grid-area: left;
+  }
+  
+  /* Style the middle column */
+  .middle {
+    grid-area: middle;
+  }
+  
+  /* Style the right column */
+  .right {
+    grid-area: right;
+  }
+  
+  
+  
+  /* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
+  @media (max-width: 600px) {
+    .grid-container  {
+      grid-template-areas: 
+        'header header header header header header' 
+        'left left left left left left' 
+        'middle middle middle middle middle middle' 
+        'right right right right right right' 
+        'footer footer footer footer footer footer';
+    }
+  }
+  /* styles.css */
+  .html{
+    height: 100%;
+  }
+  body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+    margin: 0;
+  }
+  
+  .container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+    flex: 1 0 auto;
+    font-family: Tahoma, sans-serif;
+  }
+  
+  h2 {
+    margin-top: 30px;
+    margin-bottom: 20px;
+  }
+  
+  .card-img-top {
+    max-height: 200px;
+    object-fit: cover;
+  }
+  
+  .order-button {
+    margin-top: 10px;
+  }
+  
+  /* styles.css */
+  /* ... existing styles ... */
+  
+  header {
+    background-color: #ababab;
+    padding: 5px;
+    color: white;
+  }
+  
+  header h1 {
+    margin: 0;
+    font-size: 24px;
+    text-align: center;
+  }
+  
+  .product-image {
+    height: 200px; /* Set a fixed height */
+    width: 100%; /* Set a fixed width */
+    object-fit: cover; /* Fill the container while maintaining aspect ratio */
+    object-position: center; /* Center the image within the container */
+  }
+  .card {
+    margin-bottom: 20px; /* Add some space between the cards */
+  }
+  .card-img-top {
+    max-height: 100px; /* Set a maximum height for the image */
+    object-fit: contain; /* Keep the image's aspect ratio and center it */
+  }
+  .card-text {
+    font-size: 14px;
+    font-family: Tahoma, sans-serif;
+  }
+  .card-title{
+    font-family: Tahoma, sans-serif;
+    font-size: 18px;
+  }
+  
+  
+  nav {
+    width: 55%;
+    max-width: 1200px; 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #ababab;
+    height: 80px;
+    padding: 0 60px;
+  
+    border-radius: 0px !important;
+    margin-top: 110px;
+  }
+  
+  .nav-textscroller {
+    background-color: #e0e0e0;
+    height: 35px;
+    overflow: hidden;
+  }
+  
+  .nav-textscroller p {
+    font-size: 16px;
+    margin: 0;
+    padding: 5px;
+    white-space: nowrap;
+    animation: scroll 25s linear infinite;
+    font-family: Tahoma, sans-serif;
+    color: #3b3b3b
+  }
+  @keyframes scroll {
+    0% {
+      transform: translateX(100%);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+  }
+  .down {
+    height: 35px; 
+    background-color: #e6e6e6;
+  }
+  
+  nav a {
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+  }
+  
+  nav a:hover {
+    text-decoration: underline;
+  }
+  
+  form div {
+    margin-bottom: 10px;
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  input[type="text"],
+  input[type="email"],
+  textarea {
+    width: 100%;
+    padding: 5px;
+    border: 1px solid #ced4da;
+    border-radius: 4px;
+  }
+  
+  button[type="submit"] {
+    background-color: #007bff;
+    color: white;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  button[type="submit"]:hover {
+    background-color: #0056b3;
+  }
+  .content-wrapper {
+    flex: 1;
+  }
+  
+  .navbar {
+    background-color: #ababab;
+    border-radius: 10px;
+    margin: 0 auto;
+    max-width: 2000px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 40px 20px;
+    height: 80px; 
+    width: 100%; 
+    z-index: 1000;
+    position: relative;
+  }
+  
+  /* Styling for expanded menu in mobile view */
+  @media (max-width: 991.98px) {
+    .navbar-collapse {
+      justify-content: flex-start;
+      margin-left: -35px;
+      margin-top: 0px;
+    }
+  
+    .navbar-nav {
+      flex-direction: row;
+      position: relative;
+      left: -145px;
+      font-size: 20px;
+     
+    }
+  
+    .nav-item {
+      margin-right: -5px;
+    }
+  
+    .logo {
+      display: none;
+    }
+  
+    .down {
+      display: none;
+    }
+  
+    .navbar-toggler {
+      position: absolute;
+      top: 10px;
+      right: 290px; 
+  }
+  
+    .navbar-toggler-icon {
+      margin-top: -5px;
+      font-size: 15px;
+    }
+    
+    .nav-textscroller {
+      display: none;
+    }
+    
+  }
+  
+  .navbar-brand {
+    font-size: 16px;
+    margin-left: 60px;
+    font-family: Tahoma, sans-serif;
+    color: #3b3b3b !important;
+    margin-bottom: -30px;
+  }
+  
+  .navbar-nav .nav-link {
+    font-size: 16px;
+    margin-left: 10px;
+    font-family: Tahoma, sans-serif;
+    color: #3b3b3b !important;
+    margin-bottom: -30px;
+  }
+  
+  .nav-link {
+    font-size: 20px;
+  }
+  
+  .navbar-nav {
+    display: flex;
+    margin-left: 210px;
+  }
+  
+  .navbar-nav .nav-link:hover {
+    color: #808080 !important;
+  }
+  .navbar-brand:hover {
+    color: grey;
+  }
+  .navbar-brand:hover {
+    color: grey !important;
+  }
+  .contact-info {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .contact-info li {
+    margin-bottom: 5px;
+  }
+  
+  .logo {
+    height: 250px;
+    max-height: 200%;
+    width: auto;
+    position: absolute;
+    left: 0;
+    margin-right: 20px;
+    margin-bottom: 0px;
+  }
+  
+  .social-icons-container {
+    margin-top: 180px;
+  }
+  .social-icon i {
+    color: #3b3b3b;
+    transition: color 0.2s ease-in-out;
+  }
+  
+  .social-icon:hover i {
+    color: blue;
+  }
+  
+  footer {
+    background-color: #ffffff;
+    padding: 16px;
+    color: #3b3b3b;
+    margin-top: 10px;
+    width: 100%;
+    text-align: center;
+    border-top: 1px solid rgb(118, 118, 118);
+    max-width: 1000px;
+    margin: 0 auto;
+    font-family: Tahoma, sans-serif;
+  }
+  
+  footer hr {
+    border: 0;
+    height: 1px;
+    background-image: linear-gradient(to right, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 0.2));
+  }
+  
+  #confirmationDetails {
+    font-family: Tahoma, sans-serif;
+    font-size: 24px;
+  }
+  .short-description {
+    display: -webkit-box;
+    -webkit-line-clamp: 3; /* number of lines to display */
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  div.centered
+  {
+  margin-top: 30px;  
+  margin-left: 332px;
+  }
+  
+         * {
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  
+  /* Style the header */
+  .header {
+    grid-area: header;
+    background-color: #f1f1f1;
+    padding: 30px;
+    text-align: center;
+    font-size: 35px;
+  }
+  
+  /* The grid container */
+  .grid-container {
+    display: grid;
+    grid-template-areas: 
+      'header header header header header header' 
+      'left left middle middle right right' 
+      'footer footer footer footer footer footer';
+    /* grid-column-gap: 10px; - if you want gap between the columns */
+  } 
+  
+  .left,
+  .middle,
+  .right {
+    padding: 10px;
+    height: 300px; /* Should be removed. Only for demonstration */
+  }
+  
+  /* Style the left column */
+  .left {
+    grid-area: left;
+  }
+  
+  /* Style the middle column */
+  .middle {
+    grid-area: middle;
+  }
+  
+  /* Style the right column */
+  .right {
+    grid-area: right;
+  }
+  
+  
+  
+  /* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
+  @media (max-width: 600px) {
+    .grid-container  {
+      grid-template-areas: 
+        'header header header header header header' 
+        'left left left left left left' 
+        'middle middle middle middle middle middle' 
+        'right right right right right right' 
+        'footer footer footer footer footer footer';
+    }
+  }
+  /* styles.css */
+  .html{
+    height: 100%;
+  }
+  body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+    margin: 0;
+  }
+  
+  .container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+    flex: 1 0 auto;
+    font-family: Tahoma, sans-serif;
+  }
+  
+  h2 {
+    margin-top: 30px;
+    margin-bottom: 20px;
+  }
+  
+  .card-img-top {
+    max-height: 200px;
+    object-fit: cover;
+  }
+  
+  .order-button {
+    margin-top: 10px;
+  }
+  
+  /* styles.css */
+  /* ... existing styles ... */
+  
+  header {
+    background-color: #ababab;
+    padding: 5px;
+    color: white;
+  }
+  
+  header h1 {
+    margin: 0;
+    font-size: 24px;
+    text-align: center;
+  }
+  
+  .product-image {
+    height: 200px; /* Set a fixed height */
+    width: 100%; /* Set a fixed width */
+    object-fit: cover; /* Fill the container while maintaining aspect ratio */
+    object-position: center; /* Center the image within the container */
+  }
+  .card {
+    margin-bottom: 20px; /* Add some space between the cards */
+  }
+  .card-img-top {
+    max-height: 100px; /* Set a maximum height for the image */
+    object-fit: contain; /* Keep the image's aspect ratio and center it */
+  }
+  .card-text {
+    font-size: 14px;
+    font-family: Tahoma, sans-serif;
+  }
+  .card-title{
+    font-family: Tahoma, sans-serif;
+    font-size: 18px;
+  }
+  
+  
+  nav {
+    width: 55%;
+    max-width: 1200px; 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #ababab;
+    height: 80px;
+    padding: 0 60px;
+  
+    border-radius: 0px !important;
+    margin-top: 110px;
+  }
+  
+  .nav-textscroller {
+    background-color: #e0e0e0;
+    height: 35px;
+    overflow: hidden;
+  }
+  
+  .nav-textscroller p {
+    font-size: 16px;
+    margin: 0;
+    padding: 5px;
+    white-space: nowrap;
+    animation: scroll 25s linear infinite;
+    font-family: Tahoma, sans-serif;
+    color: #3b3b3b
+  }
+  @keyframes scroll {
+    0% {
+      transform: translateX(100%);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+  }
+  .down {
+    height: 35px; 
+    background-color: #e6e6e6;
+  }
+  
+  nav a {
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+  }
+  
+  nav a:hover {
+    text-decoration: underline;
+  }
+  
+  form div {
+    margin-bottom: 10px;
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  input[type="text"],
+  input[type="email"],
+  textarea {
+    width: 100%;
+    padding: 5px;
+    border: 1px solid #ced4da;
+    border-radius: 4px;
+  }
+  
+  button[type="submit"] {
+    background-color: #007bff;
+    color: white;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  button[type="submit"]:hover {
+    background-color: #0056b3;
+  }
+  .content-wrapper {
+    flex: 1;
+  }
+  
+  .navbar {
+    background-color: #ababab;
+    border-radius: 10px;
+    margin: 0 auto;
+    max-width: 2000px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 40px 20px;
+    height: 80px; 
+    width: 100%; 
+    z-index: 1000;
+    position: relative;
+  }
+  
+  /* Styling for expanded menu in mobile view */
+  @media (max-width: 991.98px) {
+    .navbar-collapse {
+      justify-content: flex-start;
+      margin-left: -35px;
+      margin-top: 0px;
+    }
+  
+    .navbar-nav {
+      flex-direction: row;
+      position: relative;
+      left: -145px;
+      font-size: 20px;
+     
+    }
+  
+    .nav-item {
+      margin-right: -5px;
+    }
+  
+    .logo {
+      display: none;
+    }
+  
+    .down {
+      display: none;
+    }
+  
+    .navbar-toggler {
+      position: absolute;
+      top: 10px;
+      right: 290px; 
+  }
+  
+    .navbar-toggler-icon {
+      margin-top: -5px;
+      font-size: 15px;
+    }
+    
+    .nav-textscroller {
+      display: none;
+    }
+    
+  }
+  
+  .navbar-brand {
+    font-size: 16px;
+    margin-left: 60px;
+    font-family: Tahoma, sans-serif;
+    color: #3b3b3b !important;
+    margin-bottom: -30px;
+  }
+  
+  .navbar-nav .nav-link {
+    font-size: 16px;
+    margin-left: 10px;
+    font-family: Tahoma, sans-serif;
+    color: #3b3b3b !important;
+    margin-bottom: -30px;
+  }
+  
+  .nav-link {
+    font-size: 20px;
+  }
+  
+  .navbar-nav {
+    display: flex;
+    margin-left: 210px;
+  }
+  
+  .navbar-nav .nav-link:hover {
+    color: #808080 !important;
+  }
+  .navbar-brand:hover {
+    color: grey;
+  }
+  .navbar-brand:hover {
+    color: grey !important;
+  }
+  .contact-info {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .contact-info li {
+    margin-bottom: 5px;
+  }
+  
+  .logo {
+    height: 250px;
+    max-height: 200%;
+    width: auto;
+    position: absolute;
+    left: 0;
+    margin-right: 20px;
+    margin-bottom: 0px;
+  }
+  
+  .social-icons-container {
+    margin-top: 180px;
+  }
+  .social-icon i {
+    color: #3b3b3b;
+    transition: color 0.2s ease-in-out;
+  }
+  
+  .social-icon:hover i {
+    color: blue;
+  }
+  
+  footer {
+    background-color: #ffffff;
+    padding: 16px;
+    color: #3b3b3b;
+    margin-top: 10px;
+    width: 100%;
+    text-align: center;
+    border-top: 1px solid rgb(118, 118, 118);
+    max-width: 1000px;
+    margin: 0 auto;
+    font-family: Tahoma, sans-serif;
+  }
+  
+  footer hr {
+    border: 0;
+    height: 1px;
+    background-image: linear-gradient(to right, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 0.2));
+  }
+  
+  #confirmationDetails {
+    font-family: Tahoma, sans-serif;
+    font-size: 24px;
+  }
+  .short-description {
+    display: -webkit-box;
+    -webkit-line-clamp: 3; /* number of lines to display */
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  div.centered
+  {
+  margin-top: 30px;  
+  margin-left: 332px;
+  }
+  
+  
